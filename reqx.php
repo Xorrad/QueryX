@@ -1,8 +1,4 @@
 <?php
-$bdd = new PDO("mysql:host=localhost;dbname=xfounder", 'root', '');
-
-//add line detector
-
 function reqx($req, $arguments = array(), $debug = false)
 {
 	global $bdd;
@@ -20,7 +16,6 @@ function reqx($req, $arguments = array(), $debug = false)
 				
 				if(!table_exists($table))
 				{
-					//echo '<a style="color: red;">WARNING</a>: table <a style="color: orange;">'.$table.'</a> not exists<br>';
 					trigger_error('table "'.$table.'" not exists in table');
 					exit();
 				}
@@ -35,7 +30,6 @@ function reqx($req, $arguments = array(), $debug = false)
 							break;
 						}
 						
-						//echo '<a style="color: red;">WARNING</a>: colomn <a style="color: orange;">'.$colomn.'</a> not exists in table <a style="color: orange;">'.$table.'</a><br>';
 						trigger_error('colomn "'.$colomn.'" not exists in table "'.$table.'"');
 						$cancel_execution = true;
 					}
@@ -84,7 +78,6 @@ function reqx($req, $arguments = array(), $debug = false)
 				{
 					if(!colomn_exists($table, $where))
 					{
-						//echo '<a style="color: red;">WARNING</a>: colomn <a style="color: orange;">'.$where.'</a> not exists in table <a style="color: orange;">'.$table.'</a><br>';
 						trigger_error('colomn "'.$colomn.'" not exists in table "'.$table.'"');
 						$cancel_execution = true;
 					}
@@ -123,7 +116,6 @@ function reqx($req, $arguments = array(), $debug = false)
 				
 				if(!table_exists($table))
 				{
-					//echo '<a style="color: red;">WARNING</a>: table <a style="color: orange;">'.$table.'</a> not exists<br>';
 					trigger_error('table "'.$table.'" not exists in table');
 					exit();
 				}
@@ -175,7 +167,6 @@ function reqx($req, $arguments = array(), $debug = false)
 				{
 					if(!colomn_exists($table, $colomn))
 					{
-						//echo '<a style="color: red;">WARNING</a>: colomn <a style="color: orange;">'.$colomn.'</a> not exists in table <a style="color: orange;">'.$table.'</a><br>';
 						trigger_error('colomn "'.$colomn.'" not exists in table "'.$table.'"');
 						$cancel_execution = true;
 					}
@@ -224,7 +215,6 @@ function reqx($req, $arguments = array(), $debug = false)
 				{
 					if(!colomn_exists($table, $where))
 					{
-						//echo '<a style="color: red;">WARNING</a>: colomn <a style="color: orange;">'.$where.'</a> not exists in table <a style="color: orange;">'.$table.'</a><br>';
 						trigger_error('colomn "'.$colomn.'" not exists in table "'.$table.'"');
 						$cancel_execution = true;
 					}
@@ -293,7 +283,6 @@ function reqx($req, $arguments = array(), $debug = false)
 				{
 					if(!colomn_exists($table, $colomn))
 					{
-						//echo '<a style="color: red;">WARNING</a>: colomn <a style="color: orange;">'.$colomn.'</a> not exists in table <a style="color: orange;">'.$table.'</a><br>';
 						trigger_error('colomn "'.$colomn.'" not exists in table "'.$table.'"');
 						$cancel_execution = true;
 					}
