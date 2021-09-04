@@ -1,2 +1,2 @@
-# ReqX
-PHP Function to execute SQL query
+# QueryX
+PHP Classes to execute SQL query easier
