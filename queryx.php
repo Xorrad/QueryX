@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Some classes to simplify communication from php to database
+ * Some classes to simplify communication between php to database
  *
  * @author     Xorrad <monsieurs.aymeric@gmail.com>
  * @license    https://www.gnu.org/licenses/gpl-3.0.en.html  GNU General Public License v3.0
@@ -149,7 +149,7 @@ class Database
        */
     function column_exists($table, $column)
     {
-        $query =	$this->pdo->prepare("SHOW COLUMNS FROM $table LIKE '$column'");
+        $query = $this->pdo->prepare("SHOW COLUMNS FROM $table LIKE '$column'");
         $query->execute();
         $row_count = $query->rowCount();
         $query->closeCursor();
