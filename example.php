@@ -12,15 +12,15 @@ $database->connect('localhost', 'db', 'root', '');
 //Check if the connection has succeeded
 if($database->is_connected())
 {
-    //Execute a sql request to the database
-    $request = $database->execute('SELECT * FROM users WHERE Username = ?', array('Xorrad'));
-    //$request = $database->execute('UPDATE users SET Username = ? WHERE Id = ?', array('Xorrad2', 1));
+    //Execute a sql query to the database
+    $query = $database->execute('SELECT * FROM users WHERE Username = ?', array('Xorrad'));
+    //$query = $database->execute('UPDATE users SET Username = ? WHERE Id = ?', array('Xorrad2', 1));
 
-    //Check if the request has succeeded
-    if($request->has_succeeded())
+    //Check if the query has succeeded
+    if($query->has_succeeded())
     {
-        var_dump($request->get_rows());
-        echo $request->get_count().' rows has been retrieve from the database';
+        var_dump($query->get_rows());
+        echo $query->get_count().' rows has been retrieve from the database';
     }
     else
     {
