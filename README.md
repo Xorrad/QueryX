@@ -1,2 +1,2 @@
 # QueryX
-PHP Classes to execute SQL query easier
+PHP Classes to execute SQL query faster
