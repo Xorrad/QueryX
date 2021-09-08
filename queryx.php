@@ -212,7 +212,7 @@ class Database
             }
             else if($final_query->type == 'INSERT')
             {
-                $final_query->inserted_id = $this->pdo->lastInsertId();
+                $final_query->last_insert_id = $this->pdo->lastInsertId();
             }
 
             $query->closeCursor();
