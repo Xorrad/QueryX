@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Some classes to simplify communication between php to database
+ * Some classes to simplify communication between php and database
  *
  * @author     Xorrad <monsieurs.aymeric@gmail.com>
  * @license    https://www.gnu.org/licenses/gpl-3.0.en.html  GNU General Public License v3.0
